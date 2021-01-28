@@ -1,0 +1,14 @@
+server:
+  port: 8081
+logging:
+  level:
+    org:
+      springframework:
+        data: debug
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/moduloclientes
+springdoc:
+  swagger-ui:
+    path: /api-doc.html
