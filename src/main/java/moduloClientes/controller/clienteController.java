@@ -37,6 +37,12 @@ public class clienteController {
 		cliente entity = service.findById(idCliente);
 		return new ResponseEntity<cliente>(entity, new HttpHeaders(), HttpStatus.OK);
 	}
+	
+	@GetMapping("/verificarCuenta/{id}")
+	public ResponseEntity<String> verificarCuenta(@PathVariable("id") String idCliente) throws RecordNotFoundException {
+		String response = service.verificarCuenta(idCliente);
+		return new ResponseEntity<String>(response, new HttpHeaders(), HttpStatus.OK);
+	}
 
 	@PostMapping("/cliente")
 	public ResponseEntity<cliente> newCliente(@RequestBody cliente cliente){
@@ -55,4 +61,7 @@ public class clienteController {
 		service.deleteCliente(idCliente);
 		return HttpStatus.OK;
 	}
+	
+
+
 }

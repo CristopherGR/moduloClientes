@@ -7,7 +7,7 @@ import moduloClientes.model.movimiento;
 
 
 @Repository
-public interface movimientoRepository extends MongoRepository<movimiento, Integer>{
+public interface movimientoRepository extends MongoRepository<movimiento, String>{
 	
 
 }

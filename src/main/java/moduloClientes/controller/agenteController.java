@@ -20,13 +20,13 @@ import moduloClientes.model.agente;
 import moduloClientes.service.agenteService;
 
 @RestController
-@RequestMapping("/agentes")
+@RequestMapping("/api")
 public class agenteController {
 	@Autowired
 	private agenteService service;
 	
 	
-	@GetMapping("/all")
+	@GetMapping("/agentes")
 	public ResponseEntity<List<agente>> getAll() {
 		List<agente> list = service.getAll();
 		return new ResponseEntity<List<agente>>(list, new HttpHeaders(), HttpStatus.OK);

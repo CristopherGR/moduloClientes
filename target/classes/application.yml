@@ -8,7 +8,4 @@ logging:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/moduloclientes
-springdoc:
-  swagger-ui:
-    path: /api-doc.html
+      uri: mongodb://localhost:27017/moduloClientes

@@ -13,20 +13,22 @@ import moduloClientes.repository.rutaRepository;
 
 @Service
 public class rutaService {
+	
 	@Autowired
 	private rutaRepository repository;
 	
 	public List<ruta> getAll(){
-		return (List<ruta>) repository.findAll();
+		List<ruta> lista = repository.findAll();/*
 		
-	/*	if(lista.size() > 0) {
+		if(lista.size() > 0) {
 			return lista;
 		} else {
 			return new ArrayList<ruta>();
 		}*/
+		return lista;
 	}
 	
-	public ruta findById(int idRuta) throws RecordNotFoundException{
+	public ruta findById(String idRuta) throws RecordNotFoundException{
 		Optional<ruta> ruta = repository.findById(idRuta);
 		
 		if(ruta.isPresent()) {
@@ -50,7 +52,7 @@ public class rutaService {
 		}
 	}
 	
-	public void deleteRuta(int idRuta) throws RecordNotFoundException{
+	public void deleteRuta(String idRuta) throws RecordNotFoundException{
 		Optional<ruta> ruta = repository.findById(idRuta);
 		
 		if(ruta.isPresent()) {

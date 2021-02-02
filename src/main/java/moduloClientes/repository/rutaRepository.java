@@ -5,9 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import moduloClientes.model.ruta;
 
-
 @Repository
-public interface rutaRepository extends MongoRepository<ruta, Integer> {
+public interface rutaRepository extends MongoRepository<ruta, String> {
 	
 
 }

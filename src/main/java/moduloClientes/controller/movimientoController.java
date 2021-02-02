@@ -35,7 +35,7 @@ public class movimientoController {
 	}
 
 	@GetMapping("/movimiento/{id}")
-	public ResponseEntity<movimiento> getMovimientoById(@PathVariable("id") int idMovimiento) throws RecordNotFoundException {
+	public ResponseEntity<movimiento> getMovimientoById(@PathVariable("id") String idMovimiento) throws RecordNotFoundException {
 		movimiento entity = service.findById(idMovimiento);
 		return new ResponseEntity<movimiento>(entity, new HttpHeaders(), HttpStatus.OK);
 	}
@@ -53,7 +53,7 @@ public class movimientoController {
 	}
 
 	@DeleteMapping("/movimiento/{id}")
-	public HttpStatus deleteMovimiento(@PathVariable("id") int idMovimiento) throws RecordNotFoundException {
+	public HttpStatus deleteMovimiento(@PathVariable("id") String idMovimiento) throws RecordNotFoundException {
 		service.deleteMovimiento(idMovimiento);
 		return HttpStatus.OK;
 	}

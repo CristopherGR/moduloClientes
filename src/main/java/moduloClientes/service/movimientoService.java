@@ -27,7 +27,7 @@ public class movimientoService {
 		}
 	}
 	
-	public movimiento findById(int idMovimiento) throws RecordNotFoundException{
+	public movimiento findById(String idMovimiento) throws RecordNotFoundException{
 		Optional<movimiento> movimiento = repository.findById(idMovimiento);
 		
 		if(movimiento.isPresent()) {
@@ -51,7 +51,7 @@ public class movimientoService {
 		}
 	}
 	
-	public void deleteMovimiento(int idMovimiento) throws RecordNotFoundException{
+	public void deleteMovimiento(String idMovimiento) throws RecordNotFoundException{
 		Optional<movimiento> movimiento = repository.findById(idMovimiento);
 		
 		if(movimiento.isPresent()) {

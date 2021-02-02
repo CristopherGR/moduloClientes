@@ -20,12 +20,12 @@ import moduloClientes.model.cuentaCliente;
 import moduloClientes.service.cuentaClienteService;
 
 @RestController
-@RequestMapping("/cuentas")
+@RequestMapping("/api")
 public class cuentaClienteController {
 	@Autowired
 	private cuentaClienteService service;
 	
-	@GetMapping("/all")
+	@GetMapping("/cuentas")
 	public ResponseEntity<List<cuentaCliente>> getAll() {
 		List<cuentaCliente> list = service.getAll();
 		return new ResponseEntity<List<cuentaCliente>>(list, new HttpHeaders(), HttpStatus.OK);

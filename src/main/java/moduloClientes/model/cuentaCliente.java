@@ -12,10 +12,10 @@ public class cuentaCliente {
 	
 	@Id
 	private String numeroCuenta;
-
-	@Field
-	private String idCliente;
 	
 	@Field
 	private Double saldoTotal;
+	
+	@Field
+	private String estadoCuenta;
 }
