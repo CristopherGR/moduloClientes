@@ -61,7 +61,7 @@ public class clienteService {
 	}
 	
 	public cliente updateCliente(cliente cliente) throws RecordNotFoundException {
-		Optional<cliente> clienteTemp = repositoryCliente.findById(cliente.getIdCliente());
+		Optional<cliente> clienteTemp = repositoryCliente.findById(cliente.get_id());
 	
 		if(clienteTemp.isPresent()){
 			return repositoryCliente.save(cliente);

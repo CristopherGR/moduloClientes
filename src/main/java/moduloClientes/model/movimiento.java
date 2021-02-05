@@ -14,7 +14,7 @@ import lombok.Data;
 public class movimiento {
 	
 	@Id
-	private String idMovimiento;
+	private String _id;
 	
 	@Field
 	private String numeroCuenta;

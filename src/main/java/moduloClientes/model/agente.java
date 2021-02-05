@@ -11,10 +11,7 @@ import lombok.Data;
 public class agente {
 	
 	@Id
-	private String id;
-	
-	@Field
-	private String ciAgente;
+	private String _id;
 	
 	@Field
 	private String nombre;

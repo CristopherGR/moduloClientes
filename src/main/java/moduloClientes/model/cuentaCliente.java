@@ -11,7 +11,7 @@ import lombok.Data;
 public class cuentaCliente {
 	
 	@Id
-	private String numeroCuenta;
+	private String _id;
 	
 	@Field
 	private Double saldoTotal;

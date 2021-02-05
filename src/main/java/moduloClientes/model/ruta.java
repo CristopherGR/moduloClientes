@@ -11,7 +11,7 @@ import lombok.Data;
 public class ruta {
 	
 	@Id
-	private String idRuta;
+	private String _id;
 	
 	@Field
 	private String descripcion;

@@ -42,7 +42,7 @@ public class movimientoService {
 	}
 	
 	public movimiento updateMovimiento(movimiento movimiento) throws RecordNotFoundException {
-		Optional<movimiento> movimientoTemp = repository.findById(movimiento.getIdMovimiento());
+		Optional<movimiento> movimientoTemp = repository.findById(movimiento.get_id());
 	
 		if(movimientoTemp.isPresent()){
 			return repository.save(movimiento);

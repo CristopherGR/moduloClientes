@@ -41,7 +41,7 @@ public class agenteService {
 	}
 	
 	public agente updateAgente(agente agente) throws RecordNotFoundException {
-		Optional<agente> agenteTemp = repository.findById(agente.getCiAgente());
+		Optional<agente> agenteTemp = repository.findById(agente.get_id());
 	
 		if(agenteTemp.isPresent()){
 			return repository.save(agente);

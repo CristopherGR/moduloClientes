@@ -41,7 +41,7 @@ public class cuentaClienteService {
 	}
 	
 	public cuentaCliente updateCuenta(cuentaCliente cuenta) throws RecordNotFoundException {
-		Optional<cuentaCliente> cuentaTemp = repository.findById(cuenta.getNumeroCuenta());
+		Optional<cuentaCliente> cuentaTemp = repository.findById(cuenta.get_id());
 	
 		if(cuentaTemp.isPresent()){
 			return repository.save(cuenta);

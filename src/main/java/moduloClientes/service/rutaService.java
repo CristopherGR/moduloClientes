@@ -1,6 +1,5 @@
 package moduloClientes.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,13 +17,7 @@ public class rutaService {
 	private rutaRepository repository;
 	
 	public List<ruta> getAll(){
-		List<ruta> lista = repository.findAll();/*
-		
-		if(lista.size() > 0) {
-			return lista;
-		} else {
-			return new ArrayList<ruta>();
-		}*/
+		List<ruta> lista = repository.findAll();
 		return lista;
 	}
 	
@@ -43,7 +36,7 @@ public class rutaService {
 	}
 	
 	public ruta updateRuta(ruta ruta) throws RecordNotFoundException {
-		Optional<ruta> rutaTemp = repository.findById(ruta.getIdRuta());
+		Optional<ruta> rutaTemp = repository.findById(ruta.get_id());
 	
 		if(rutaTemp.isPresent()){
 			return repository.save(ruta);

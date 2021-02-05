@@ -11,10 +11,7 @@ import lombok.Data;
 public class cliente {
 	
 	@Id
-	private String id;
-	
-	@Field
-	private String idCliente;
+	private String _id;
 	
 	@Field
 	private String tipoCliente;
