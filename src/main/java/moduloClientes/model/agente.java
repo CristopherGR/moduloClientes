@@ -11,6 +11,9 @@ import lombok.Data;
 public class agente {
 	
 	@Id
+	private String id;
+	
+	@Field
 	private String ciAgente;
 	
 	@Field
@@ -18,6 +21,9 @@ public class agente {
 	
 	@Field
 	private String apellido;
+	
+	@Field
+	private String estado;
 	
 	@Field
 	private String telefono;
